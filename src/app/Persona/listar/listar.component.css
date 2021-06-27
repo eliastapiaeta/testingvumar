@@ -51,20 +51,21 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 0.3fr 0.8fr 1fr 1fr 1fr 1.5fr 2fr;
+  grid-template-columns: 0.2fr 0.8fr 1fr 1fr 1fr 1.5fr 2fr;
   grid-template-rows: max-content;
   grid-gap: 7px;
   transition: all 1s;
   justify-items: center;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 .table-main-header {
   background: #1c7e89;
   color: azure;
 }
 .table-header {
-  margin: 1rem 0 1rem 0.3rem;
+  margin: 1rem 0.5vw 1rem 1vw;
   width: 100%;
+  padding: 0.5vw 0.5vw 0.5vw 0.5vw;
 }
 .table-item-iconSteps {
   display: grid;
@@ -85,7 +86,7 @@
   /* justify-content: stretch; */
   background: yellow;
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
 }
 .table-item-iconActions {
   display: grid;
@@ -101,9 +102,10 @@
   width: 100%;
   height: auto;
   overflow: scroll;
-  min-width: 43px;
+  min-width: 30px;
   text-align: center;
   align-self: center;
+  overflow-wrap: anywhere;
 }
 .table-item-h-one,
 .table-item-h-two,
@@ -138,9 +140,45 @@
   position: relative;
 }
 
-
-@media only screen and (max-width: 370px) {
+@media only screen and (max-width: 425px) {
   .table-container {
     font-size: 12px !important;
+  }
+  .table-header {
+    margin: 1rem 0.1vw 1rem 1vw;
+    width: 100%;
+    padding: 0.1vw 0.1vw 0.1vw 0.1vw;
+  }
+  .table-item {
+    min-width: 50px;
+  }
+  .table-item-id {
+    min-width: 33px;
+  }
+  .grid {
+    grid-template-columns: 0.7fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 364px) {
+  .table-container {
+    font-size: 11px !important;
+  }
+  .table-header {
+    margin: 1rem 0.1vw 1rem 0.5vw;
+    width: 100%;
+    padding: 0.1vw 0.1vw 0.1vw 0.1vw;
+  }
+  .mat-icon {
+    height: 30px;
+    width: 30px;
+  }
+  .estado-linea {
+    width: 100%;
+  }
+  .grid {
+    grid-gap: 4px;
+  }
+  .table-item {
+    min-width: 40px;
   }
 }
