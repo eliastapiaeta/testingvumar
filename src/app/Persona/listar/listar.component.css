@@ -171,6 +171,58 @@
   position: relative;
 }
 
+.header-form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2vw;
+  font-family: Raleway, sans-serif;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  padding-bottom: 1.5rem;
+}
+.header-form-input-search {
+  width: 100%;
+  animation: cdk-text-field-autofill-end 0s 1ms;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  font-size: medium;
+}
+.header-form-search-containerMain {
+  background-color: rgba(0, 0, 0, 0.04);
+  align-self: center;
+}
+.header-form-search-container {
+  display: grid;
+  grid-template-columns: auto 35px;
+  padding-bottom: 1rem;
+  padding-inline: 1rem;
+}
+.header-form-search-label {
+  font-weight: 100;
+  padding-inline: 1rem;
+  font-variant: all-small-caps;
+  margin-bottom: unset;
+  mix-blend-mode: hard-light;
+}
+.header-form-search-containerMain-form {
+  background-color: rgba(0, 0, 0, 0.04);
+  align-self: center;
+}
+.header-form-search-containerMain-form-input {
+  width: 100%;
+}
+.header-form-search-label-container {
+  display: grid;
+  grid-template-columns: auto 20px;
+}
+.header-form-search-containerMain-form-algo {
+  display: grid;
+  grid-template-columns: auto 30px;
+}
+
 @media only screen and (max-width: 900px) {
   .grid {
     grid-template-columns: 0.7fr 0.7fr 0.9fr 0.9fr 1fr 2fr 2fr 35px;
@@ -178,6 +230,25 @@
   }
 }
 @media only screen and (max-width: 670px) {
+  .header-form-search-container {
+    grid-template-columns: 1fr;
+  }
+  .header-form-search-icon-search {
+    visibility: hidden;
+    display: none;
+  }
+  .header-form-search-iconMini-search {
+    visibility: visible;
+    display: inline;
+    font-size: larger;
+    color: #0000004a;
+    background-color: transparent;
+    padding-top: 4px;
+    height: 2rem;
+  }
+  .header-form-search-label-container {
+  }
+
   .table-container {
     font-size: 13px !important;
   }
@@ -212,6 +283,13 @@
   .grid {
     grid-template-columns: 0.7fr 1fr 1fr 1fr 1fr 0.7fr 1fr;
     grid-gap: 4px;
+  }
+  .header-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .header-form-NewAndRefresh-buttons {
+    visibility: hidden;
+    display: none;
   }
 }
 @media only screen and (max-width: 425px) {
