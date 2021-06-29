@@ -1,83 +1,7 @@
 <hr />
-<div class="container">
-  <button class="js-button">Animate</button>
-</div>
-<hr />
 
 <div class="header-form">
-  <div class="header-form-search-containerMain">
-    <div class="header-form-search-label-container">
-      <span class=""
-        ><label
-          class="header-form-search-label"
-          id="mat-form-field-label-1"
-          for="mat-input-0"
-          aria-owns="mat-input-0"
-          >Buscar</label
-        ></span
-      >
-      <mat-icon
-        role="img"
-        matsuffix=""
-        class="header-form-search-iconMini-search"
-        aria-hidden="true"
-        data-mat-icon-type="font"
-        >search</mat-icon
-      >
-    </div>
-    <div class="header-form-search-container">
-      <input
-        matinput=""
-        type="text"
-        class="header-form-input-search"
-        id="mat-input-0"
-        data-placeholder="Búsqueda por ID / Nombre / N° OMI / Señal de llamada"
-        aria-invalid="false"
-        aria-required="false"
-        placeholder="Búsqueda por ID / Nombre / N° OMI / Señal de llamada"
-      />
-      <mat-icon
-        role="img"
-        matsuffix=""
-        class="header-form-search-icon-search"
-        aria-hidden="true"
-        data-mat-icon-type="font"
-        >search</mat-icon
-      >
-    </div>
-  </div>
-  <form novalidate="" class="header-form-search-containerMain-form">
-    <span class=""
-      ><label
-        class="header-form-search-label"
-        for="mat-input-1"
-        aria-owns="mat-input-1"
-        >Buscar otro trámite</label
-      ></span
-    >
-    <div class="header-form-search-containerMain-form-algo">
-      <input
-        numerico=""
-        formcontrolname="idTramite"
-        matinput=""
-        type="number"
-        class="header-form-input-search"
-        data-placeholder="Búsqueda por ID"
-        aria-invalid="false"
-        aria-required="false"
-        placeholder="Búsqueda por ID"
-      />
-      <mat-icon
-        role="img"
-        matsuffix=""
-        class="header-form-search-iconMini-search-ii"
-        aria-hidden="true"
-        data-mat-icon-type="font"
-        >arrow_right_alt</mat-icon
-      >
-    </div>
-  </form>
-  <div class="header-form-NewAndRefresh-buttons">
+  <div class="header-form-smallDevice">
     <button
       mat-raised-button=""
       color="primary"
@@ -85,13 +9,104 @@
       class="btn-nuevaSolicitudPreArribo"
       tabindex="0"
     >
-      <span class="">
-        Nueva Solicitud Pre Arribo
-      </span>
+      <span class=""> Nueva Solicitud Pre Arribo </span>
     </button>
     <button mat-raised-button="" color="primary" class="btn-refresh">
       <span class=""> Refrescar </span>
     </button>
+  </div>
+
+  <hr style="padding-bottom: 1.5rem" />
+
+  <div class="titlePage">Listado de Trámites</div>
+
+  <div class="header-form-largeDevice">
+    <div class="header-form-search-containerMain">
+      <div class="header-form-search-label-container">
+        <span class=""
+          ><label
+            class="header-form-search-label"
+            id="mat-form-field-label-1"
+            for="mat-input-0"
+            aria-owns="mat-input-0"
+            >Buscar</label
+          ></span
+        >
+        <mat-icon
+          role="img"
+          matsuffix=""
+          class="header-form-search-iconMini-search"
+          aria-hidden="true"
+          data-mat-icon-type="font"
+          >search</mat-icon
+        >
+      </div>
+      <div class="header-form-search-container">
+        <input
+          matinput=""
+          type="text"
+          class="header-form-input-search"
+          id="mat-input-0"
+          data-placeholder="Búsqueda por ID / Nombre / N° OMI / Señal de llamada"
+          aria-invalid="false"
+          aria-required="false"
+          placeholder="Búsqueda por ID / Nombre / N° OMI / Señal de llamada"
+        />
+        <mat-icon
+          role="img"
+          matsuffix=""
+          class="header-form-search-icon-search"
+          aria-hidden="true"
+          data-mat-icon-type="font"
+          >search</mat-icon
+        >
+      </div>
+    </div>
+    <form novalidate="" class="header-form-search-containerMain-form">
+      <span class=""
+        ><label
+          class="header-form-search-label"
+          for="mat-input-1"
+          aria-owns="mat-input-1"
+          >Buscar otro trámite</label
+        ></span
+      >
+      <div class="header-form-search-containerMain-form-algo">
+        <input
+          numerico=""
+          formcontrolname="idTramite"
+          matinput=""
+          type="number"
+          class="header-form-input-search"
+          data-placeholder="Búsqueda por ID"
+          aria-invalid="false"
+          aria-required="false"
+          placeholder="Búsqueda por ID"
+        />
+        <mat-icon
+          role="img"
+          matsuffix=""
+          class="header-form-search-iconMini-search-ii"
+          aria-hidden="true"
+          data-mat-icon-type="font"
+          >arrow_right_alt</mat-icon
+        >
+      </div>
+    </form>
+    <div class="header-form-NewAndRefresh-buttons">
+      <button
+        mat-raised-button=""
+        color="primary"
+        routerlink="/recepcion/solicitudPreArribo"
+        class="btn-nuevaSolicitudPreArribo"
+        tabindex="0"
+      >
+        <span class=""> Nueva Solicitud Pre Arribo </span>
+      </button>
+      <button mat-raised-button="" color="primary" class="btn-refresh">
+        <span class=""> Refrescar </span>
+      </button>
+    </div>
   </div>
 </div>
 

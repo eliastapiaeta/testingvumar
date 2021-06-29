@@ -14,16 +14,6 @@
   border: none;
   border-radius: 5px;
 }
-.js-button {
-  border: none;
-  border-radius: 5px;
-  background: #1c7e89;
-  color: azure;
-  box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%),
-    0 1px 5px 0 rgb(0 0 0 / 12%);
-  line-height: 36px;
-  padding: 0 16px;
-}
 .mat-icon {
   border-radius: 50%;
   background-color: #ccc;
@@ -47,6 +37,16 @@
 }
 .icon-text {
   font-size: 9px;
+}
+.titlePage {
+  margin-top: 1rem !important;
+  border-bottom: 1px solid #dee2e6 !important;
+  text-align: left;
+  width: 100vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  font-size: x-large;
+  margin-bottom: 3rem;
 }
 
 .grid {
@@ -171,7 +171,7 @@
   position: relative;
 }
 
-.header-form {
+.header-form-largeDevice {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2vw;
@@ -179,6 +179,10 @@
   margin-left: 3vw;
   margin-right: 3vw;
   padding-bottom: 1.5rem;
+}
+.header-form-smallDevice {
+  display: none;
+  visibility: hidden;
 }
 .header-form-input-search {
   width: 100%;
@@ -189,6 +193,7 @@
   padding: 0;
   margin: 0;
   font-size: medium;
+  height: 35px;
 }
 .header-form-search-containerMain {
   background-color: rgba(0, 0, 0, 0.04);
@@ -239,11 +244,16 @@
   border: none;
   border-radius: 3px;
   color: azure;
+  height: inherit;
 }
 
 .header-form-search-iconMini-search-ii {
   border-radius: 8%;
   background: #1c7e89;
+}
+.header-form-search-containerMain,
+.header-form-search-containerMain-form {
+  height: 6rem;
 }
 
 @media only screen and (max-width: 900px) {
@@ -269,7 +279,12 @@
     padding-top: 4px;
     height: 2rem;
   }
-  
+  .header-form-NewAndRefresh-buttons-ii {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 1rem;
+  }
+
   .table-container {
     font-size: 13px !important;
   }
@@ -297,7 +312,7 @@
     display: none;
   }
 }
-@media only screen and (max-width: 531px) {
+@media only screen and (max-width: 540px) {
   .table-container {
     font-size: 12px !important;
   }
@@ -305,8 +320,28 @@
     grid-template-columns: 0.7fr 1fr 1fr 1fr 1fr 0.7fr 1fr;
     grid-gap: 4px;
   }
-  .header-form {
+  .titlePage {
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+  .btn-nuevaSolicitudPreArribo,
+  .btn-refresh {
+    height: 35px;
+  }
+  .header-form-largeDevice {
     grid-template-columns: repeat(2, 1fr);
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+  .header-form-smallDevice {
+    display: grid;
+    grid-template-columns: auto 7rem;
+    gap: 2vw;
+    font-family: Raleway, sans-serif;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    /* padding-bottom: 1.5rem; */
+    visibility: visible;
   }
   .header-form-NewAndRefresh-buttons {
     visibility: hidden;
@@ -330,10 +365,6 @@
   }
   .grid {
     grid-template-columns: 0.7fr 1fr 1fr 1fr 1fr 0.7fr 0.7fr;
-  }
-  .mat-icon {
-    height: 30px;
-    width: 30px;
   }
 }
 @media only screen and (max-width: 364px) {
