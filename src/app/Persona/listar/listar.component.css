@@ -197,7 +197,6 @@
 .header-form-search-container {
   display: grid;
   grid-template-columns: auto 35px;
-  padding-bottom: 1rem;
   padding-inline: 1rem;
 }
 .header-form-search-label {
@@ -220,7 +219,31 @@
 }
 .header-form-search-containerMain-form-algo {
   display: grid;
-  grid-template-columns: auto 30px;
+  grid-template-columns: auto 35px;
+  padding-left: 1rem;
+}
+.header-form-NewAndRefresh-buttons {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 1rem;
+}
+.header-form-search-iconMini-search {
+  visibility: hidden;
+  display: none;
+}
+.btn-nuevaSolicitudPreArribo,
+.btn-refresh {
+  background: #1c7e89 !important;
+  box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 6px 10px 0 rgb(0 0 0 / 14%),
+    0 1px 18px 0 rgb(0 0 0 / 12%);
+  border: none;
+  border-radius: 3px;
+  color: azure;
+}
+
+.header-form-search-iconMini-search-ii {
+  border-radius: 8%;
+  background: #1c7e89;
 }
 
 @media only screen and (max-width: 900px) {
@@ -246,9 +269,7 @@
     padding-top: 4px;
     height: 2rem;
   }
-  .header-form-search-label-container {
-  }
-
+  
   .table-container {
     font-size: 13px !important;
   }
